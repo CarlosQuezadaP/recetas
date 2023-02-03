@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.carlosquezada.recipe_dashboard">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <application>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDHiOt27K91WqJGbd_iqXA0c2eio5pHNn8"/>
+        <activity
+            android:name=".presentation.activity.MainActivity"
+            android:theme="@style/Theme.Recetas"
+            android:exported="false"/>
+    </application>
+
+</manifest>

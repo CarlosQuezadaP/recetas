@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/recipe_dashboard_navigation"
+    app:startDestination="@id/homeRecipesFragment">
+
+    <fragment
+        android:id="@+id/homeRecipesFragment"
+        android:name="com.carlosquezada.recipe_dashboard.presentation.ui.home.HomeRecipesFragment"
+        android:label="Recipes"
+        tools:layout="@layout/fragment_home_recipes">
+        <action
+            android:id="@+id/action_homeRecipesFragment_to_detailRecipeFragment"
+            app:destination="@id/detailRecipeFragment"
+            >
+            <argument
+                android:name="nameOfRecipe"
+                app:argType="string" />
+            <argument
+                android:name="imageUrl"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detailRecipeFragment"
+        android:name="com.carlosquezada.recipe_dashboard.presentation.ui.detail.DetailRecipeFragment"
+        android:label="Detail recipe"
+        tools:layout="@layout/fragment_detail_recipe">
+        <argument
+            android:name="nameOfRecipe"
+            app:argType="string" />
+        <argument
+            android:name="imageUrl"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_detailRecipeFragment_to_locationRecipeFragment"
+            app:destination="@id/locationRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationRecipeFragment"
+        android:name="com.carlosquezada.recipe_dashboard.presentation.ui.map.LocationRecipeFragment"
+        android:label="fragment_location_recipe"
+        tools:layout="@layout/fragment_location_recipe" />
+</navigation>

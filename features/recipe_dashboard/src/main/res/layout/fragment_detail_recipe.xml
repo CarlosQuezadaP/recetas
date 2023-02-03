@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModelRecipeDetail"
+            type="com.carlosquezada.recipe_dashboard.presentation.ui.detail.DetailRecipeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimens_20dp"
+        tools:context=".presentation.ui.detail.DetailRecipeFragment">
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/RatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:isIndicator="true"
+            android:numStars="5"
+            android:rating="5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_recipe_name"
+            style="@style/Text22Semi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimens_20dp"
+            android:gravity="center_horizontal"
+            android:text="@{viewModelRecipeDetail.recipe.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+            tools:text="Pizza" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/Text14Grey"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            android:drawablePadding="@dimen/space8"
+            android:gravity="center"
+            android:text="So semifreddo as a combination with one of my favorite desserts Tiramisu sounded so wonderful in my mind that I made me equal to work, to test ever."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_info" />
+
+        <LinearLayout
+            android:id="@+id/ll_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimens_10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_recipe_name">
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/Text14Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_time"
+                android:drawablePadding="@dimen/space8"
+                android:text="1h 20'"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tv_Location"
+                style="@style/Text14Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/space24"
+                android:drawableLeft="@drawable/ic_earth"
+                android:drawablePadding="@dimen/space8"
+                android:text="@string/location"
+                android:textColor="#164ACD" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/Text22Semi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dimens_26dp"
+            android:gravity="center_horizontal"
+            android:text="@string/steps"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_desc" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerPreparation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dimens_10dp"
+            android:background="@null"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:listitem="@layout/item_preparation" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

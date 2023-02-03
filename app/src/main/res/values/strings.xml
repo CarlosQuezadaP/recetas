@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Recipes</string>
+    <string name="search">Search</string>
+    <string name="introDecription">Esta es una prueba tecnica presentada a Yape con el proposito de mostrar los conocimientos que poseo sobre el desarrollo de apps para dispositivos android.\n
+        \nAlgunas librerias usadas:\n
+\n* Inyeccion de dependencias con KOIN.\n
+\n* Manejo de threading con Coroutines.\n
+\n* Material Components.\n
+\n* LLamadas de red con Ktor.\n
+\n* Manejo de imagenes con Glide.\n
+\n* Navigation Component.\n
+\n* Splash Screen API.\n
+        \nEl proyecto funciona bajo una estructura multimodular cuyos componentes son: <b>app</b>, <b>core</b> , <b>recipe_dashboard</b> , se implementan lineamientos de <b>clean code</b>, y se aplica una <b>arquitectura limpia</b> bajo un <b>patron de presentacion MVVM</b>.
+
+    </string>
+</resources>

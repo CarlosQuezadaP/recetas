@@ -1,0 +1,22 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.Recetas" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPink</item>
+        <item name="colorPrimaryDark">@color/colorPink</item>
+        <item name="colorAccent">@color/colorPink</item>
+        <item name="android:windowBackground">@android:color/white</item>
+
+    </style>
+
+    <!-- Splash Screen Theme (Android 12+) -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen.IconBackground">
+        <item name="windowSplashScreenBackground">@color/colorPink</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="windowSplashScreenIconBackgroundColor">@color/colorPinkDark</item>
+        <item name="postSplashScreenTheme">@style/Theme.Recetas</item>
+        <item name="windowSplashScreenAnimationDuration">2000</item>
+    </style>
+
+</resources>
